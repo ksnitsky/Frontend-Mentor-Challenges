@@ -1,0 +1,274 @@
+// import
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap');
+
+// variables
+	// colors
+$dark-grey: hsl(217, 19%, 35%);
+$grey: hsl(214, 17%, 51%);
+$light-grey: hsl(212, 23%, 69%);
+$white-back: hsl(210, 46%, 95%);
+	// other
+$border: 10px;
+
+// styles
+* {
+	margin: 0;
+	padding: 0;
+	outline: 0;
+	box-sizing: border-box;
+}
+
+*:not(h1):not(h2):not(h3) {
+	font-size: 13px;
+}
+
+body, html {
+	width: 100vw;
+	min-height: 100vh;
+	overflow-x: hidden;
+	background: $white-back;
+	font-family: 'Manrope', sans-serif;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	display: block;
+}
+
+svg {display: block;}
+
+	// flexing
+body {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.box {
+	display: flex;
+	flex-direction: row;
+	margin-top: auto;
+
+	position: relative;
+
+	max-width: 730px;
+	height: auto;
+	
+	background-color: #ffffff;
+	border-radius: $border;
+	box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+
+	&__poster {
+		height: auto;
+		width: 40%;
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: 0 0;
+			border-radius: 10px 0px 0px 10px;
+		}
+	}
+
+	&-body {
+		width: 60%;
+		padding: 35px 40px 20px;
+
+		display: flex;
+		flex-direction: column;
+
+		&__title {
+			font-weight: 700;
+			color: $dark-grey;
+		}
+
+		&__text {
+			margin: 20px 0;
+			color: $grey;
+			
+			line-height: 1.5em;
+		}
+
+		&__bottom {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+
+			&__left {
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				
+				img {
+					height: 40px;
+					border-radius: 50%;
+					margin-right: 10px;
+				}
+
+				.name-date {
+					.name {
+						font-weight: 700;
+						color: $dark-grey;
+					}
+
+					.date {
+						color: $light-grey;
+					}
+				}
+			}
+
+			&__right {
+				.share-button {
+					padding: 11px;
+					cursor: pointer;
+					border-radius: 50%;
+					
+					background-color: $white-back;
+					transition: .3s;
+					
+					path {transition: .3s;}
+					&:hover {
+						transition: .3s;
+						background-color: $grey;
+
+						path {
+							fill: $white-back;
+							transition: .3s;
+						}
+					}
+				}
+				.poop {
+					background-color: $grey;
+					path {
+						fill: $white-back;
+					}
+					
+				}
+			}
+		}
+	}
+	.share-panel {
+		display: none;
+		position: absolute;
+		top: 49%; right: -10%;
+
+		&::after {
+			content:'';
+			position: absolute;
+			bottom: -13px; left: 40%;
+
+			margin: 0 auto;
+			width: 0;
+			height: 0;
+			border-left: 20px solid transparent;
+			border-right: 20px solid transparent;
+			border-top: 20px solid $dark-grey;
+		}
+	}
+
+	.share-block {
+		height: auto;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		padding: 20px 35px;
+
+		justify-content: space-around;
+		align-items: center;
+
+		background-color: $dark-grey;
+		border-radius: $border;
+
+		p {
+			text-transform: uppercase;
+			letter-spacing: 6px;
+			color: $light-grey;
+			margin-right: 20px;
+		}
+
+		ul {
+			list-style-type: none;
+			display: flex;
+			align-items: center;
+
+			li:not(:last-child) {
+				padding-right: 15px;
+			}
+		}
+		
+		path {transition: .3s;}
+		a:hover path {
+			fill: $light-grey;
+			transition: .3s;
+		}
+	}
+}
+
+	// footer
+.attribution {
+	margin-top: auto;
+	margin-bottom: 15px;
+	font-size: 11px; 
+	text-align: center;
+	a {
+		color: hsl(228, 45%, 44%);
+	}
+}
+
+
+@media only screen and (max-width: 375px) {
+	.box {
+		flex-direction: column;
+		margin: auto;
+
+		max-width: 330px;
+		width: auto;
+
+		&__poster {
+			height: 41%;
+			width: 100%;
+
+			img {
+				border-radius: 10px 10px 0px 0px;
+			}
+		}
+
+		&-body {
+
+			width: 100%;
+			padding: 35px 30px 20px;
+
+			h2 {font-size: 1.25em;}
+			p {font-size: 1em;}
+			&__text {margin: 15px 0 30px;}
+
+			&__bottom__right{
+				position: relative;
+				z-index: 3;
+			}
+		}
+		
+		.share-panel {
+			position: absolute;
+			z-index: 0;
+			width: 100%;
+			bottom: 0; right: 0; top: auto;
+			&::after {border: none;}
+		}
+		.share-block {
+			z-index: 0;
+			border-radius: 0 0 10px 10px;
+			li:last-child {
+				padding-right: 50px;
+			}
+		}
+		.poop {
+			transform: translateY(10px);
+		}
+	}
+}
