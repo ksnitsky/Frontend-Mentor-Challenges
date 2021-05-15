@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+html, body {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  font-size: 15px;
+  font-family: "Lexend Deca", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+}
+
+h2, p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.main {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f2f2f2;
+}
+.main__cards {
+  display: flex;
+  flex-direction: column;
+  margin: 45px auto;
+}
+.main__attribution {
+  margin-top: auto;
+  margin-bottom: 15px;
+  font-size: 11px;
+  text-align: center;
+}
+.main__attribution-link {
+  color: #3e52a3;
+}
+
+.box {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+}
+.box__img {
+  width: 64px;
+  height: 40px;
+  padding: 50px;
+  padding-bottom: 0;
+}
+.box__title {
+  padding-top: 0;
+  font-size: 2em;
+  margin: 40px 50px;
+  text-transform: uppercase;
+  font-family: "Big Shoulders Display", cursive;
+  color: #f2f2f2;
+}
+.box__content {
+  padding-top: 0;
+  margin: 0 50px 50px;
+  font-weight: lighter;
+  color: rgba(255, 255, 255, 0.75);
+}
+.box__bottom {
+  margin: auto 50px 50px;
+}
+.box__bottom-button {
+  display: inline-block;
+  padding: 10px 30px;
+  background-color: #f2f2f2;
+  border: 2px solid #f2f2f2;
+  border-radius: 25px;
+}
+.box__bottom-button:hover {
+  background-color: transparent;
+  color: rgba(255, 255, 255, 0.75);
+}
+.box:first-child {
+  border-radius: 10px 10px 0 0;
+}
+.box:last-child {
+  border-radius: 0 0 10px 10px;
+}
+.box-1 {
+  background-color: #e38826;
+}
+.box-1 a {
+  color: #e38826;
+}
+.box-2 {
+  background-color: #006970;
+}
+.box-2 a {
+  color: #006970;
+}
+.box-3 {
+  background-color: #004241;
+}
+.box-3 a {
+  color: #004241;
+}
+
+@media (min-width: 1025px) {
+  .main {
+    height: 100%;
+  }
+  .main__cards {
+    flex-direction: row;
+    margin-top: auto;
+  }
+  .main__cards .box:first-child {
+    border-radius: 10px 0 0 10px;
+  }
+  .main__cards .box:last-child {
+    border-radius: 0 10px 10px 0;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
