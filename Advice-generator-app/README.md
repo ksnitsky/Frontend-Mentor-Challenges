@@ -33,8 +33,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [GitHub](https://github.com/ksnitsky/Frontent-Mentor-Challenges/tree/main/Advice-generator-app)
+- Live Site URL: [Vercel](https://advice-generator-app-nu.vercel.app)
 
 ## My process
 
@@ -68,4 +68,3 @@ Learned how to use Vite as a project build tool.
 
 - GitHub - [@ksnitsky](https://github.com/ksnitsky)
 - Frontend Mentor - [@ksnitsky](https://www.frontendmentor.io/profile/ksnitsky)
-
