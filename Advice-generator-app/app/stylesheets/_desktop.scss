@@ -3,15 +3,16 @@
 @media (min-width: 530px) {
 
   .advice-box {
-    width: 444px;
+    max-width: 444px;
   }
 
   .advice-box__bottom {
     .dice-button {
-      transition: .3s;
+      transition: all .3s;
+
       &:hover {
-        box-shadow: 0 0 20px colors.$neon-green;
-        transition: .3s;
+        box-shadow: 0px 0px 30px 2px colors.$neon-green;
+        transition: all .3s;
       }
     }
   }
