@@ -1,0 +1,29 @@
+@use "sass:meta";
+@use 'reset';
+@use 'colors';
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+
+body, html {
+  width: 100vw;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background: colors.$dark-blue;
+  font-family: "Manrope", sans-serif;
+  color: colors.$light-cyan;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  width: 100%;
+
+  position: absolute;
+  bottom: 20px;
+
+  a {
+    color: colors.$neon-green;
+  }
+}
+
+@include meta.load-css('desktop');
+@include meta.load-css('mobile');

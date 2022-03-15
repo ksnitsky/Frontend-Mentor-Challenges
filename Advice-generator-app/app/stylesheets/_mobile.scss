@@ -1,0 +1,76 @@
+@use "colors";
+
+$divider-img: url('../images/middle-of-divider.svg');
+
+.advice-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 295px;
+
+  padding: 40px 25px;
+  text-align: center;
+
+  border-radius: 7px;
+  background-color: colors.$dark-graylish-blue;
+}
+
+.divider {
+  border: none;
+  border-top: 1px solid #4F5D74;
+
+  overflow: visible;
+  height: 16px;
+
+  &::after {
+    padding: 15px;
+    background-color: colors.$dark-graylish-blue;
+    content: $divider-img;
+    position: relative;
+    top: -50%;
+  }
+}
+
+.advice-box__top {
+  margin-bottom: 25px;
+
+  p {
+    color: colors.$neon-green;
+    text-transform: uppercase;
+    font-weight: 800;
+
+    letter-spacing: 3px;
+  }
+}
+
+.advice-box__middle {
+
+  margin-bottom: 30px;
+
+  p {
+    font-size: 28px;
+    font-weight: 800;
+    line-height: 1.4em;
+  }
+}
+
+.advice-box__bottom {
+
+  height: 5px;
+
+  .dice-button {
+    width: 24px;
+    height: 24px;
+    padding: 15px;
+
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 30%);
+
+    cursor: pointer;
+
+    background-color: colors.$neon-green;
+    border-radius: 50%;
+  }
+}

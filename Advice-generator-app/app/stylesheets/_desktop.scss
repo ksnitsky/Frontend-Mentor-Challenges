@@ -1,0 +1,18 @@
+@use "colors";
+
+@media (min-width: 530px) {
+
+  .advice-box {
+    width: 444px;
+  }
+
+  .advice-box__bottom {
+    .dice-button {
+      transition: .3s;
+      &:hover {
+        box-shadow: 0 0 20px colors.$neon-green;
+        transition: .3s;
+      }
+    }
+  }
+}
