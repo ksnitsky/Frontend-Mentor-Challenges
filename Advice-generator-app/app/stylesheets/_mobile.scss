@@ -42,12 +42,13 @@ main {
 .advice-box__top {
   margin-bottom: 25px;
 
-  p {
+  h1 {
     color: colors.$neon-green;
     text-transform: uppercase;
     font-weight: 800;
 
-    letter-spacing: 3px;
+    font-size: .9em;
+    letter-spacing: 4px;
   }
 }
 
