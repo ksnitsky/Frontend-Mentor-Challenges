@@ -34,7 +34,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [GitHub](https://github.com/ksnitsky/Frontent-Mentor-Challenges/tree/main/Advice-generator-app)
-- Live Site URL: [Vercel](https://frontent-mentor-challenges.vercel.app)
+- Live Site URL: [Vercel](https://advice-generator-app-nu.vercel.app)
 
 ## My process
 
