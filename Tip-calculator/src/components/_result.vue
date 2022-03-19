@@ -1,0 +1,118 @@
+<script setup>
+import { ref } from "vue"
+
+const props = defineProps({
+                billAmount:     Number,
+                tipPercent:     Number,
+                numberOfPeople: Number
+              })
+const total = ref(0)
+
+function totalTips() {
+  total.value = (props.billAmount * (props.tipPercent == 0 ? 1 : props.tipPercent / 100)) / props.numberOfPeople
+  return total.value.toLocaleString("en-US", {style:"currency", currency:"USD"})
+}
+
+function totalBill() {
+  return (
+    total.value + (props.billAmount / props.numberOfPeople)
+  ).toLocaleString("en-US", {style:"currency", currency:"USD"}) 
+}
+</script>
+
+<template>
+  <div class="result">
+
+    <div class="top">
+      <div class="amount-line">
+        <div class="amount-line__left">
+          <p class="left-title">Tip Amount</p>
+          <p class="left-person">/ person</p>
+        </div>
+
+        <div class="amount-line__right">
+          <span>
+            {{ totalTips() }}
+          </span>
+        </div>
+      </div>
+
+      <div class="amount-line">
+        <div class="amount-line__left">
+          <p class="left-title">Total</p>
+          <p class="left-person">/ person</p>
+        </div>
+        <div class="amount-line__right">
+          <span>
+            {{ totalBill() }}
+            <!-- {{ (($props.billAmount * ($props.tipPercent / 100)) / $props.numberOfPeople)
+                .toLocaleString("en-US", {style:"currency", currency:"USD"}) }} -->
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <button type="reset" class="reset-button">
+      RESET
+    </button>
+
+  </div>
+</template>
+
+<style lang="scss">
+.result {
+  background: variables.$very-dark-cyan;
+  border-radius: 12px;
+
+  padding: 25px;
+
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-between;
+
+  gap: 30px;
+
+  .top {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    .amount-line {
+      display: flex;
+      justify-content: space-between;
+      text-align: left;
+
+      &__left {
+        .left-title {
+          color: variables.$very-light-grayish-cyan;
+        }
+        .left-person {
+          font-size: 12px;
+        }
+      }
+
+      &__right {
+        color: variables.$strong-cyan;
+        font-size: 36px;
+      }
+    }
+  }
+
+  .reset-button {
+    display: block;
+    padding: 10px 0;
+    background-color: variables.$strong-cyan;
+    color: variables.$very-dark-cyan;
+    border: none;
+    border-radius: 5px;
+
+    font-size: 18px;
+    cursor: pointer;
+
+    &:active {
+      box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.4);
+    }
+  }
+}
+</style>

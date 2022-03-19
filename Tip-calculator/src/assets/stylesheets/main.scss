@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-size-adjust: none;
+  font-family: 'Space Mono', monospace;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+input {
+  color: variables.$very-dark-cyan;
+  &:focus {
+    outline-color: variables.$strong-cyan;
+  }
+}
+
+.invalid {
+  outline: 2px solid chocolate;
+}
+
