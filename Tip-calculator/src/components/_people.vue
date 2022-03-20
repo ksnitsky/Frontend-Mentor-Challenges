@@ -2,7 +2,13 @@
   import { ref } from "vue";
   import { isNum } from "../helpers/helpers";
 
-  defineProps(['isInvalid'])
+  const emit = defineEmits(['setPeople'])
+  const isInvalid = ref(false)
+
+  function peopleCount(value) {
+    if (!(isInvalid.value = value >= 1 ? false : true))
+      emit('setPeople', parseInt(value))
+  }
 </script>
 
 <template>
@@ -19,7 +25,7 @@
     </div>
     <input
       @keypress="isNum($event, 'pt')"
-      @change="$emit('setPeople', $event.target.value)"
+      @change="peopleCount($event.target.value)"
       type="text"
       name="people-count"
       id="people-count"

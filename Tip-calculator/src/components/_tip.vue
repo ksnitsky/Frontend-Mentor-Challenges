@@ -2,18 +2,18 @@
   import { ref } from 'vue'
   import { isNum } from '../helpers/helpers'
 
-  const tip = ref(15)
-  const isInvalid = ref(false)
   const emit = defineEmits(['setTip'])
+  const isInvalid = ref(false)
+  const tip = ref(15)
 
-  function checkValue(e) {
-    tip.value =  e.target.value != '' && e.target.value >= 0 && e.target.value <= 100 ? parseInt(e.target.value) : 0
+  function checkValue(value) {
+    tip.value = value != '' && value >= 0 && value <= 100 ? parseInt(value) : 0
+    emit('setTip', tip.value)
   }
 
-  function customTip(e) {
-    isInvalid.value = e.target.value >= 0 && e.target.value <= 100 ? false : true
-    if (!isInvalid.value) {
-      tip.value = parseInt(e.target.value)
+  function customTip(value) {
+    if (!(isInvalid.value = value != '' && value >= 0 && value <= 100 ? false : true)) {
+      tip.value = parseInt(value)
       emit('setTip', tip.value)
     }
   }
@@ -88,8 +88,8 @@
         <input type="radio" name="tip-percent" id="choice-custom">
         <input
           @keypress="isNum($event, 'pt')"
-          @click="checkValue($event)"
-          @change="customTip($event)"
+          @click="checkValue($event.target.value)"
+          @change="customTip($event.target.value)"
           :class="{ invalid: isInvalid }"
           type="text"
           name="tip-percent"
@@ -149,10 +149,6 @@
         border-radius: 5px;
         user-select: none;
         text-align: center;
-
-        &:focus {
-          color: red;
-        }
 
         &:active {
           box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.4);

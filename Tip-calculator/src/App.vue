@@ -20,7 +20,6 @@
 
 <style lang="scss">
 #app {
-
   display: flex;
   flex-direction: column;
   justify-content: space-around;

@@ -10,39 +10,29 @@
     tipPercent:     15,
     numberOfPeople: 1
   })
-  const isInvalid = ref(false)
-
-  // TODO: эту штуку перенести обратно в _people
-  function peopleCount(count) {
-    isInvalid.value = count >= 1 ? false : true
-    if (!isInvalid.value)
-      data.value.numberOfPeople = parseInt(count)
-  }
-
 </script>
 
 <template>
-  <div class="container">
+  <form class="container">
     <div class="container__calculate">
-      <!-- Если это стереть после ввода, то NaN -->
       <Bill
-        @setBill="(e) => data.billAmount = parseFloat(e)"
+        @setBill="(e) => data.billAmount = e"
       />
       <Tip
         @setTip="(e) => data.tipPercent = parseInt(e)"
       />
       <People
-        :is-invalid="isInvalid"
-        @setPeople="peopleCount"
+        @setPeople="(e) => data.numberOfPeople = e"
       />
     </div>
 
     <div class="container__result">
       <Result
+        @resetButton="data.billAmount = 0"
         v-bind="data"
       />
     </div>
-  </div>
+  </form>
 </template>
 
 <style lang="scss">

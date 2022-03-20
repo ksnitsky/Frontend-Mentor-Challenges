@@ -7,6 +7,7 @@ const props = defineProps({
                 numberOfPeople: Number
               })
 const total = ref(0)
+defineEmits(['resetButton'])
 
 function totalTips() {
   total.value = (props.billAmount * (props.tipPercent == 0 ? 1 : props.tipPercent / 100)) / props.numberOfPeople
@@ -16,7 +17,7 @@ function totalTips() {
 function totalBill() {
   return (
     total.value + (props.billAmount / props.numberOfPeople)
-  ).toLocaleString("en-US", {style:"currency", currency:"USD"}) 
+  ).toLocaleString("en-US", {style:"currency", currency:"USD"})
 }
 </script>
 
@@ -45,14 +46,16 @@ function totalBill() {
         <div class="amount-line__right">
           <span>
             {{ totalBill() }}
-            <!-- {{ (($props.billAmount * ($props.tipPercent / 100)) / $props.numberOfPeople)
-                .toLocaleString("en-US", {style:"currency", currency:"USD"}) }} -->
           </span>
         </div>
       </div>
     </div>
 
-    <button type="reset" class="reset-button">
+    <button
+      @click="$emit('resetButton')"
+      type="reset"
+      class="reset-button"
+    >
       RESET
     </button>
 
@@ -81,6 +84,7 @@ function totalBill() {
     .amount-line {
       display: flex;
       justify-content: space-between;
+      align-items: center;
       text-align: left;
 
       &__left {
