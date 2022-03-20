@@ -21,7 +21,7 @@ function customTip(value) {
 
 <template>
   <div class="tip">
-    <label class="tip__label" for="tip__choice">Select Tip %</label>
+    <span class="tip__label">Select Tip %</span>
     <div class="tip__choice">
 
       <div class="amount-button">
@@ -85,7 +85,7 @@ function customTip(value) {
       </div>
 
       <div class="amount-button">
-        <input type="radio" name="tip-percent" id="choice-custom">
+        <input type="radio" name="tip-percent">
         <input
           @keypress="isNum($event, 'pt')"
           @click="checkValue($event.target.value)"

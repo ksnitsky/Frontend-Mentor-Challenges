@@ -44,7 +44,7 @@ function resetInput(e) {
 
 <style lang="scss">
 .container {
-  max-width: 920px;
+  max-width: 900px;
   padding: 30px;
   background-color: variables.$white;
   color: variables.$dark-grayish-cyan;

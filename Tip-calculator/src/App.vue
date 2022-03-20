@@ -5,19 +5,25 @@ import Container from './components/Container.vue';
 </script>
 
 <template>
-  <h1 class="title" />
-  <Container />
-  <div class="attribution">
+  <header>
+    <h1 class="title">
+      <img src="./assets/images/logo.svg" alt="SPLITTER">
+    </h1>
+  </header>
+  <main>
+    <Container />
+  </main>
+  <footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="https://github.com/ksnitsky">Snitsky</a>.
-  </div>
+  </footer>
 </template>
 
 <style lang="scss">
 #app {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
 
   min-width: 100vw;
@@ -31,7 +37,6 @@ import Container from './components/Container.vue';
   display: block;
   width: 87px;
   height: 54px;
-  background: url('./assets/images/logo.svg'), no-repeat, center;
 
   @media (max-width: 650px) {
     margin: 40px 0;

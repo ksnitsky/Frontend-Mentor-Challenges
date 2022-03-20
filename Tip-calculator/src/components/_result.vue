@@ -98,7 +98,7 @@ function totalBill() {
 
       &__right {
         color: variables.$strong-cyan;
-        font-size: 36px;
+        font-size: 50px;
       }
     }
   }
