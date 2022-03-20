@@ -18,6 +18,7 @@ function validate(value) {
       @change="$emit('setBill', validate($event.target.value))"
       type="text"
       name="bill-amount"
+      id="bill-amount"
       minlength="1"
       maxlength="10"
       :class="{ invalid: isInvalid }"

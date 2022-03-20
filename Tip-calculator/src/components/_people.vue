@@ -28,6 +28,7 @@ function peopleCount(value) {
       @change="peopleCount($event.target.value)"
       type="text"
       name="people-count"
+      id="people-count"
       minlength="0"
       maxlength="3"
       :class="{ invalid: isInvalid }"
