@@ -1,13 +1,13 @@
 <script setup>
-  import { ref } from "vue";
-  import { isNum } from "../helpers/helpers";
+import { ref } from "vue";
+import { isNum } from "../helpers/helpers";
 
-  const isInvalid = ref(false)
+const isInvalid = ref(false)
 
-  function validate(value) {
-    isInvalid.value = (value.match(/\./g) || []).length > 1 || value < 0 ? true : false
-    return !isInvalid.value && value != '' && value >= 0 ? parseFloat(value) : 0
-  }
+function validate(value) {
+  isInvalid.value = (value.match(/\./g) || []).length > 1 || value < 0 ? true : false
+  return !isInvalid.value && value != '' && value >= 0 ? parseFloat(value) : 0
+}
 </script>
 
 <template>
@@ -22,6 +22,7 @@
       minlength="1"
       maxlength="10"
       :class="{ invalid: isInvalid }"
+      placeholder="0"
     />
   </div>
 </template>
@@ -50,6 +51,8 @@
     padding: 0 15px;
 
     border-radius: 5px;
+
+    cursor: pointer;
   }
 }
 </style>

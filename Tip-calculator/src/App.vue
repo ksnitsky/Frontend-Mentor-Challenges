@@ -1,7 +1,7 @@
 <script setup>
-  // This starter template is using Vue 3 <script setup> SFCs
-  // Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
-  import Container from './components/Container.vue';
+// This starter template is using Vue 3 <script setup> SFCs
+// Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
+import Container from './components/Container.vue';
 </script>
 
 <template>
@@ -47,7 +47,7 @@
   }
 
   @media (max-width: 650px) {
-    margin-top: 15px;
+    margin: 10px 0;
   }
 }
 </style>

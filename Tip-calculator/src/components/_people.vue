@@ -1,14 +1,14 @@
 <script setup>
-  import { ref } from "vue";
-  import { isNum } from "../helpers/helpers";
+import { ref } from "vue";
+import { isNum } from "../helpers/helpers";
 
-  const emit = defineEmits(['setPeople'])
-  const isInvalid = ref(false)
+const emit = defineEmits(['setPeople'])
+const isInvalid = ref(false)
 
-  function peopleCount(value) {
-    if (!(isInvalid.value = value >= 1 ? false : true))
-      emit('setPeople', parseInt(value))
-  }
+function peopleCount(value) {
+  if (!(isInvalid.value = value >= 1 ? false : true))
+    emit('setPeople', parseInt(value))
+}
 </script>
 
 <template>
@@ -32,6 +32,7 @@
       minlength="0"
       maxlength="3"
       :class="{ invalid: isInvalid }"
+      placeholder="0"
     />
   </div>
 </template>
@@ -65,6 +66,8 @@
     padding: 0 15px;
 
     border-radius: 5px;
+
+    cursor: pointer;
   }
 }
 </style>

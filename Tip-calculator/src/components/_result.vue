@@ -52,9 +52,9 @@ function totalBill() {
     </div>
 
     <button
-      @click="$emit('resetButton')"
       type="reset"
       class="reset-button"
+      :disabled="props.billAmount <= 0"
     >
       RESET
     </button>
@@ -116,6 +116,12 @@ function totalBill() {
 
     &:active {
       box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.4);
+    }
+
+    &:disabled,
+    [disabled] {
+      opacity: 30%;
+      cursor: auto;
     }
   }
 }

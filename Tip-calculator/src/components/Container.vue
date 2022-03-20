@@ -1,19 +1,27 @@
 <script setup>
-  import Bill from "./_bill.vue";
-  import Tip from "./_tip.vue";
-  import People from "./_people.vue";
-  import Result from "./_result.vue";
-  import { ref } from "vue";
+import Bill from "./_bill.vue";
+import Tip from "./_tip.vue";
+import People from "./_people.vue";
+import Result from "./_result.vue";
+import { ref } from "vue";
 
-  const data = ref({
-    billAmount:     0,
-    tipPercent:     15,
+const data = ref({
+  billAmount: 0,
+  tipPercent: 0,
+  numberOfPeople: 1
+})
+
+function resetInput(e) {
+  data.value = {
+    billAmount: 0,
+    tipPercent: 0,
     numberOfPeople: 1
-  })
+  }
+}
 </script>
 
 <template>
-  <form class="container">
+  <form class="container" v-on:reset="resetInput">
     <div class="container__calculate">
       <Bill
         @setBill="(e) => data.billAmount = e"
@@ -28,7 +36,6 @@
 
     <div class="container__result">
       <Result
-        @resetButton="data.billAmount = 0"
         v-bind="data"
       />
     </div>

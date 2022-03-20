@@ -1,22 +1,22 @@
 <script setup>
-  import { ref } from 'vue'
-  import { isNum } from '../helpers/helpers'
+import { ref } from 'vue'
+import { isNum } from '../helpers/helpers'
 
-  const emit = defineEmits(['setTip'])
-  const isInvalid = ref(false)
-  const tip = ref(15)
+const emit = defineEmits(['setTip'])
+const isInvalid = ref(false)
+const tip = ref(0)
 
-  function checkValue(value) {
-    tip.value = value != '' && value >= 0 && value <= 100 ? parseInt(value) : 0
+function checkValue(value) {
+  tip.value = value != '' && value >= 0 && value <= 100 ? parseInt(value) : 0
+  emit('setTip', tip.value)
+}
+
+function customTip(value) {
+  if (!(isInvalid.value = value != '' && value >= 0 && value <= 100 ? false : true)) {
+    tip.value = value
     emit('setTip', tip.value)
   }
-
-  function customTip(value) {
-    if (!(isInvalid.value = value != '' && value >= 0 && value <= 100 ? false : true)) {
-      tip.value = parseInt(value)
-      emit('setTip', tip.value)
-    }
-  }
+}
 </script>
 
 <template>
