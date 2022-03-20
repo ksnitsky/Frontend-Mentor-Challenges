@@ -45,7 +45,7 @@ function resetInput(e) {
 <style lang="scss">
 .container {
   max-width: 920px;
-  padding: 40px 30px;
+  padding: 30px;
   background-color: variables.$white;
   color: variables.$dark-grayish-cyan;
 
@@ -53,7 +53,7 @@ function resetInput(e) {
 
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
+  // margin: 0 auto;
   gap: 30px;
 
   &__calculate {
@@ -62,6 +62,7 @@ function resetInput(e) {
     flex-direction: column;
 
     gap: 30px;
+    padding: 10px;
   }
 
   &__result {

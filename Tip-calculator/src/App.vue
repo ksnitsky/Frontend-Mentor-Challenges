@@ -5,12 +5,7 @@ import Container from './components/Container.vue';
 </script>
 
 <template>
-  <div class="title">
-    <h1>
-      SPLI<br>
-      TTER
-    </h1>
-  </div>
+  <h1 class="title" />
   <Container />
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
@@ -23,6 +18,7 @@ import Container from './components/Container.vue';
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  align-items: center;
 
   min-width: 100vw;
   min-height: 100vh;
@@ -32,9 +28,14 @@ import Container from './components/Container.vue';
 }
 
 .title {
-  color: variables.$very-dark-cyan;
-  letter-spacing: 10px;
-  text-align: center;
+  display: block;
+  width: 87px;
+  height: 54px;
+  background: url('./assets/images/logo.svg'), no-repeat, center;
+
+  @media (max-width: 650px) {
+    margin: 40px 0;
+  }
 }
 
 .attribution {
@@ -43,7 +44,11 @@ import Container from './components/Container.vue';
   width: 100%;
 
   a {
-    color: variables.$very-dark-cyan;
+    color: variables.$dark-grayish-cyan;
+
+    &:hover {
+      color: variables.$strong-cyan;
+    }
   }
 
   @media (max-width: 650px) {
