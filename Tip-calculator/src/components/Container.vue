@@ -22,7 +22,7 @@ function resetInput(e) {
 
 <template>
   <form class="container" v-on:reset="resetInput">
-    <section class="container__calculate">
+    <div class="container__calculate">
       <Bill
         @setBill="(e) => data.billAmount = e"
       />
@@ -32,13 +32,13 @@ function resetInput(e) {
       <People
         @setPeople="(e) => data.numberOfPeople = e"
       />
-    </section>
+    </div>
 
-    <section class="container__result">
+    <div class="container__result">
       <Result
         v-bind="data"
       />
-    </section>
+    </div>
   </form>
 </template>
 
