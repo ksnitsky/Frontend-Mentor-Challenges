@@ -117,7 +117,7 @@ function customTip(value) {
     grid-template-columns: repeat(2, 1fr);
     gap: 15px;
 
-    @media (min-width: 740px) {
+    @media (min-width: 900px) {
       grid-template-columns: repeat(3, 0.5fr);
     }
 
@@ -134,7 +134,7 @@ function customTip(value) {
       }
 
       label, #choice-custom {
-        line-height: 50px;
+        line-height: 45px;
         font-size: 24px;
         cursor: pointer;
       }

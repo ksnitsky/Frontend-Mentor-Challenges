@@ -16,7 +16,7 @@ import Container from './components/Container.vue';
   </main>
 
   <footer class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.<br />
     Coded by <a href="https://github.com/ksnitsky">Snitsky</a>.
   </footer>
 </template>
@@ -33,12 +33,20 @@ import Container from './components/Container.vue';
   flex: 1 1 auto;
   justify-content: space-around;
   align-items: center;
+
+  gap: 30px;
+
+  @media (min-width: 900px) {
+    gap: unset;
+  }
 }
 
 .title {
   display: block;
   width: 87px;
   height: 54px;
+
+  margin-top: 50px;
 }
 
 .attribution {
@@ -53,9 +61,5 @@ import Container from './components/Container.vue';
       color: variables.$strong-cyan;
     }
   }
-
-  // @media (max-width: 650px) {
-  //   margin: 10px 0;
-  // }
 }
 </style>

@@ -22,7 +22,7 @@ function resetInput(e) {
 
 <template>
   <form class="container" v-on:reset="resetInput">
-    <div class="container__calculate">
+    <section class="container__calculate">
       <Bill
         @setBill="(e) => data.billAmount = e"
       />
@@ -32,19 +32,18 @@ function resetInput(e) {
       <People
         @setPeople="(e) => data.numberOfPeople = e"
       />
-    </div>
+    </section>
 
-    <div class="container__result">
+    <section class="container__result">
       <Result
         v-bind="data"
       />
-    </div>
+    </section>
   </form>
 </template>
 
 <style lang="scss">
 .container {
-  max-width: 100%;
   padding: 30px;
   background-color: variables.$white;
   color: variables.$dark-grayish-cyan;
@@ -59,27 +58,24 @@ function resetInput(e) {
   &__calculate {
     display: flex;
     flex-direction: column;
-    flex: 1 1 355px;
+    flex: 1 1 100%;
+
     gap: 30px;
     padding: 10px;
-
-    width: 100%;
   }
 
   &__result {
     display: flex;
-    flex: 1 1 355px;
-    width: 100%;
+    flex: 1 1 100%;
   }
 }
 
-@media (min-width: 740px) {
+@media (min-width: 900px) {
   .container {
     flex-direction: row;
+    width: 900px;
 
-    &__result {
-      display: flex;
-    }
+    max-width: 100%;
   }
 }
 </style>

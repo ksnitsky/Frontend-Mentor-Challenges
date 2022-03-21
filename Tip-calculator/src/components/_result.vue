@@ -84,14 +84,23 @@ function totalBill() {
 
     .amount-line {
       display: flex;
-      justify-content: space-between;
-      align-items: center;
-      text-align: left;
+      flex-wrap: wrap;
 
       &__left {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        flex: 1 1 32%;
+
         .left-title {
           color: variables.$very-light-grayish-cyan;
+          font-size: 14px;
+
+          @media (min-width: 900px) {
+            font-size: 16px;
+          }
         }
+
         .left-person {
           font-size: 12px;
         }
@@ -99,9 +108,21 @@ function totalBill() {
 
       &__right {
         color: variables.$strong-cyan;
-        font-size: 34px;
+        font-size: 28px;
         text-align: right;
+        display: flex;
+
+        flex: 1 1 65%;
+        width: 100%;
+
+        span {
+          width: 100%;
+        }
       }
+    }
+
+    @media (min-width: 900px) {
+      gap: 50px;
     }
   }
 
