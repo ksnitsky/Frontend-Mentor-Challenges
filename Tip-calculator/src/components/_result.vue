@@ -97,12 +97,16 @@ function totalBill() {
           font-size: 14px;
 
           @media (min-width: 900px) {
-            font-size: 16px;
+            font-size: 18px;
           }
         }
 
         .left-person {
           font-size: 12px;
+
+          @media (min-width: 900px) {
+            font-size: 14px;
+          }
         }
       }
 
@@ -117,6 +121,10 @@ function totalBill() {
 
         span {
           width: 100%;
+        }
+
+        @media (min-width: 900px) {
+            font-size: 34px;
         }
       }
     }

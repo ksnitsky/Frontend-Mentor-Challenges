@@ -21,25 +21,27 @@ function resetInput(e) {
 </script>
 
 <template>
-  <form class="container" v-on:reset="resetInput">
-    <div class="container__calculate">
-      <Bill
-        @setBill="(e) => data.billAmount = e"
-      />
-      <Tip
-        @setTip="(e) => data.tipPercent = parseInt(e)"
-      />
-      <People
-        @setPeople="(e) => data.numberOfPeople = e"
-      />
-    </div>
+  <main>
+    <form class="container" v-on:reset="resetInput">
+      <div class="container__calculate">
+        <Bill
+          @setBill="(e) => data.billAmount = e"
+        />
+        <Tip
+          @setTip="(e) => data.tipPercent = parseInt(e)"
+        />
+        <People
+          @setPeople="(e) => data.numberOfPeople = e"
+        />
+      </div>
 
-    <div class="container__result">
-      <Result
-        v-bind="data"
-      />
-    </div>
-  </form>
+      <div class="container__result">
+        <Result
+          v-bind="data"
+        />
+      </div>
+    </form>
+  </main>
 </template>
 
 <style lang="scss">
