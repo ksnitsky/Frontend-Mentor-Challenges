@@ -15,8 +15,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+
 input {
   color: variables.$very-dark-cyan;
+
   &:focus {
     outline-color: variables.$strong-cyan;
   }

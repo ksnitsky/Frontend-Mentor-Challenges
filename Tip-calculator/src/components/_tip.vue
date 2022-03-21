@@ -114,11 +114,11 @@ function customTip(value) {
 
   &__choice {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: 15px;
 
-    @media (min-width: 600px) {
-      grid-template-columns: 1fr 1fr 1fr;
+    @media (min-width: 740px) {
+      grid-template-columns: repeat(3, 0.5fr);
     }
 
     .amount-button {

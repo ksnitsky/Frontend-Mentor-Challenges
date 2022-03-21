@@ -64,13 +64,14 @@ function totalBill() {
 
 <style lang="scss">
 .result {
+  width: 100%;
+
   background: variables.$very-dark-cyan;
   border-radius: 12px;
 
   padding: 25px;
 
   display: flex;
-  flex: 1;
   flex-direction: column;
   justify-content: space-between;
 
@@ -98,7 +99,8 @@ function totalBill() {
 
       &__right {
         color: variables.$strong-cyan;
-        font-size: 50px;
+        font-size: 34px;
+        text-align: right;
       }
     }
   }

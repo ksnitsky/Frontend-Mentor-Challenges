@@ -44,40 +44,41 @@ function resetInput(e) {
 
 <style lang="scss">
 .container {
-  max-width: 900px;
+  max-width: 100%;
   padding: 30px;
   background-color: variables.$white;
   color: variables.$dark-grayish-cyan;
-
+  margin: 0 auto;
   border-radius: 15px;
 
   display: flex;
   flex-direction: column;
-  // margin: 0 auto;
+
   gap: 30px;
 
   &__calculate {
     display: flex;
-    flex: 1;
     flex-direction: column;
-
+    flex: 1 1 355px;
     gap: 30px;
     padding: 10px;
+
+    width: 100%;
   }
 
   &__result {
     display: flex;
-    flex: 1;
+    flex: 1 1 355px;
+    width: 100%;
   }
 }
 
-@media (min-width: 600px) {
+@media (min-width: 740px) {
   .container {
     flex-direction: row;
 
     &__result {
       display: flex;
-      flex: 1;
     }
   }
 }

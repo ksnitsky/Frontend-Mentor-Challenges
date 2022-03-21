@@ -20,7 +20,7 @@ function validate(value) {
       name="bill-amount"
       id="bill-amount"
       minlength="1"
-      maxlength="10"
+      maxlength="6"
       :class="{ invalid: isInvalid }"
       placeholder="0"
     />
