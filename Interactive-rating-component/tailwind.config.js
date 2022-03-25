@@ -12,7 +12,10 @@ module.exports = {
         'lightGrey': 'hsl(217, 12%, 63%)',
         'mediumGrey': 'hsl(216, 12%, 54%)',
         'darkGrey': 'hsl(216, 12%, 54%, 0.14)',
-        'darkBlue': 'hsl(213, 19%, 18%)',
+        'darkBlue': {
+          900: 'hsl(213, 19%, 18%)',
+          500: 'hsl(213, 19%, 18%, 0.5)',
+        },
         'veryDarkBlue': 'hsl(216, 12%, 8%)',
       }
     },
