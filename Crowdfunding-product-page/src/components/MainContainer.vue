@@ -6,6 +6,7 @@ import AboutBox from './MainBoxes/About.vue'
 
 <template lang="pug">
 main
+
   TitleBox
 
   BackedBox

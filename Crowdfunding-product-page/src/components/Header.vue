@@ -11,6 +11,6 @@ header
 header {
   @apply w-full h-76 desktop:h-100
     flex items-start justify-center
-    bg-mobileImg xl:bg-desktopImg bg-center bg-no-repeat bg-cover;
+    bg-mobileImg xl:bg-desktopImg bg-center bg-no-repeat;
 }
 </style>

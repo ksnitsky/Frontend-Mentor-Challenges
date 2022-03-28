@@ -1,5 +1,5 @@
 <template lang="pug">
-.box(class="gap-5")
+.box(class="gap-4 text-center")
   .stats
     h2 $89,914
     p of $100,000 backed
