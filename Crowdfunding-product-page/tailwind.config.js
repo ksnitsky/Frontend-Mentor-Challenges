@@ -5,10 +5,6 @@ module.exports = {
   ],
   theme: {
     extend: {
-      screens: {
-        'mobile': '375px',
-        'desktop': '1440px',
-      },
       colors: {
         transparent: 'transparent',
         current: 'currentColor',
@@ -16,6 +12,7 @@ module.exports = {
         'darkCyan': '#147b74',
         'darkGray': '#7a7a7a',
         'lightGray': '#F4F4F4',
+        'borderGray': '#e5e7eb',
         'primaryBg': '#FAFAFA',
       },
       backgroundImage: {

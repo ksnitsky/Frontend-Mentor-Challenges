@@ -1,33 +1,33 @@
 <template lang="pug">
 .box(class="gap-6 text-center md:text-left")#discover
-  div(class="flex flex-col md:flex-row md:justify-between gap-5 items-center")
-    .stats
+  .stats
+    div
       h2 $89,914
       p of $100,000 backed
-    hr
-    .stats
+    hr/
+
+    div
       h2 5,007
       p total backers
-    hr
-    .stats
+    hr/
+
+    div
       h2 56
       p days left
+
   .progressBar(class="w-full bg-lightGray rounded-md h-2.5")
     .progressBar__line(class="bg-moderateCyan h-2.5 rounded-md")
+
 </template>
 
-<script>
-
-</script>
-
 <style lang="postcss">
-#discover {
-  hr {
-    @apply w-24 md:w-px md:h-16;
-  }
-}
-
+/* TODO: ^ fix layout */
 .stats {
+  @apply w-full flex flex-col md:flex-row gap-5 items-center;
+
+  hr {
+    @apply w-24 h-px md:w-px md:h-10 border-none bg-borderGray;
+  }
 
   h2 {
     @apply text-3xl font-bold;

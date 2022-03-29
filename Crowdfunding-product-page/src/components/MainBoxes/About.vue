@@ -26,7 +26,7 @@ import SelectReward from './_selectReward.vue';
       You've helped us launch our promotional campaign,\
       and you’ll be added to a special Backer member list."
     :amountLeft="101"
-  ) /
+  )/
 
   SelectReward(
     title="Black Edition Stand"
@@ -35,7 +35,7 @@ import SelectReward from './_selectReward.vue';
       and a personal thank you. You’ll be added to our Backer\
       member list. Shipping is included."
     :amountLeft="64"
-  ) /
+  )/
 
   SelectReward(
     title="Mahogany Special Edition"
@@ -44,6 +44,6 @@ import SelectReward from './_selectReward.vue';
       and a personal thank you. You’ll be added\
       to our Backer member list. Shipping is included."
     :amountLeft="0"
-  ) /
+  )/
 
 </template>

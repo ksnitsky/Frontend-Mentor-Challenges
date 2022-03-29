@@ -1,6 +1,6 @@
 <template lang="pug">
-.box(class="gap-4 text-center")
-  img(src="../../assets/images/logo-mastercraft.svg" alt="mastercraft-logo")
+.box(class="gap-4 text-center")#getStarted
+  img(src="../../assets/images/logo-mastercraft.svg" alt="mastercraft-logo")/
   h1(class="text-xl font-bold")
     | Mastercraft Bamboo Monitor Riser
   p
@@ -16,3 +16,7 @@
         )
 
 </template>
+
+<style>
+/* TODO: ^ need to add style for desktop */
+</style>
