@@ -7,8 +7,8 @@ import MainContainer from './components/MainContainer.vue'
 
 <template lang="pug">
 div(class="w-full h-full flex flex-col")
-  HeaderComponent
+  HeaderComponent /
 
-  MainContainer
+  MainContainer /
 
 </template>

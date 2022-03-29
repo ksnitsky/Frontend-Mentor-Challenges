@@ -7,16 +7,16 @@ import AboutBox from './MainBoxes/About.vue'
 <template lang="pug">
 main
 
-  TitleBox
+  TitleBox /
 
-  BackedBox
+  BackedBox / 
 
-  AboutBox
+  AboutBox /
 </template>
 
 <style>
 main {
- @apply mt-[-3.5rem] w-11/12 lg:max-w-[45.5rem]
+ @apply mt-[-3.5rem] w-11/12 md:max-w-[45.5rem]
   flex flex-col gap-5 items-center self-center;
 }
 </style>

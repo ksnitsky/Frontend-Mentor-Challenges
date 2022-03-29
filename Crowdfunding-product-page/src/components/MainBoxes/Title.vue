@@ -14,4 +14,5 @@
         alt="bookmark"
         class="cursor-pointer"
         )
+
 </template>
