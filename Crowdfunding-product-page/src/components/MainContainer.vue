@@ -6,11 +6,13 @@ import AboutBox from './MainBoxes/About.vue'
 
 <template lang="pug">
 main
+
   TitleBox/
 
   BackedBox/
 
   AboutBox/
+
 </template>
 
 <style>
